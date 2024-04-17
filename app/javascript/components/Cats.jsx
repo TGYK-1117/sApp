@@ -57,6 +57,7 @@ const Cats = () => {
 				<main className="container">
 					<div className="row">{cats.length > 0 ? allCats : noCats}</div>
 					<Link to="/" className="btn btn-link">Home</Link>
+					<Link to="/random" className="btn btn-link">Random Cat</Link>
 				</main>
 			</div>
 		</>

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       post 'cats/create'
       get '/show/:id', to: 'cats#show'
       delete '/destroy/:id', to: 'cats#destroy'
+      get '/random', to: 'cats#random'
     end
   end
   root 'landingpage#index'

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-const Cat = () => {
+const Random = () => {
 	const params = useParams();
 	const navigate = useNavigate();
 	const [cat, setCat] = useState({});
 
 	useEffect(() => {
-		const url = `/api/v1/show/${params.id}`;
+		const url = `/api/v1/random`;
 		fetch(url)
 			.then((response) => {
 				if (response.ok) {
@@ -51,4 +51,4 @@ const Cat = () => {
 	);
 };
 
-export default Cat;
+export default Random;

@@ -13,9 +13,6 @@ url = "https://api.thecatapi.com/v1/images/search?has_breeds=1&api_key=live_ps7D
 	uri = URI(url)
 	response = Net::HTTP.get(uri)
 	data = JSON.parse(response)
-	puts data[0]['url']
-	puts data[0]['breeds'][0]['name']
-	puts data[0]['breeds'][0]['description']
 	Cat.create(
 		image: data[0]['url'],
 		breed: data[0]['breeds'][0]['name'],

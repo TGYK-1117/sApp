@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import CatCard from "./catcard"; 
+import CatCard from "./CatCard"; 
 
 const Cat = () => {
 	const params = useParams();

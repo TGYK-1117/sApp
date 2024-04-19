@@ -20,7 +20,7 @@ const Cats = () => {
 	}, []);
 
 	const allCats = cats.map((cat, index) => (
-		<div key={index} className="col-md-6 col-lg-4">
+		<div key={index} className="col-md-6 col-lg-2">
 			<div className="card mb-4">
 				<img
 					src={cat.image}
@@ -49,15 +49,18 @@ const Cats = () => {
 		<>
 			<section className="jumbotron jumbotron-fluid text-center">
 				<div className="container py-5">
-					<h1 className="display-4">Gatitos</h1>
-					<p className="lead text-muted">Click a cat for more details</p>
+					<h1 className="display-4">CATS</h1>
+					<p className="lead text-muted">Click a cat for more details.</p>
+					<div className="justify-content-center align-items-center">
+						<Link to="/" className="btn custom-button">Home</Link>
+						{" "}
+						<Link to="/random" className="btn custom-button">Generate a New Cat</Link>
+					</div>
 				</div>
 			</section>
-			<div className="py-5">
+			<div className="p-2">
 				<main className="container">
-					<div className="row">{cats.length > 0 ? allCats : noCats}</div>
-					<Link to="/" className="btn btn-link">Home</Link>
-					<Link to="/random" className="btn btn-link">Random Cat</Link>
+					<div className="row justify-content-center align-items-center d-flex align-items-stretch">{cats.length > 0 ? allCats : noCats}</div>
 				</main>
 			</div>
 		</>
